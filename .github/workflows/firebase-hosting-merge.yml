@@ -23,8 +23,7 @@ jobs:
           CI: false
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CLONE_5158C }}"
           channelId: live
           projectId: clone-5158c
